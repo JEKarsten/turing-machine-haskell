@@ -1,0 +1,4 @@
+testing/*-trace.txt
+testing/*-trace-log.txt
+testing/*-dotfile*
+.DS_Store

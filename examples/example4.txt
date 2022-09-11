@@ -1,0 +1,34 @@
+state: 0
+  read 0      write: 0  move: L  goto: Halt
+  read 1      write: 1  move: R  goto: Halt
+  read _      write: _  move: L  goto: State 1
+
+ state: 1
+  read 0      write: 1  move: L  goto: State 1
+  read 1      write: 0  move: L  goto: State 1
+  read _      write: _  move: R  goto: State 2
+
+ state: 2
+  read 0      write: 0  move: R  goto: State 2
+  read 1      write: 1  move: R  goto: State 2
+  read _      write: _  move: R  goto: Halt
+
+tapeInit: 11010_
+
+
+-- the trace of this machine on the given tape
+
+Config {state = State 0, tape = 11010[_]}
+Config {state = State 1, tape = 1101[0]_}
+Config {state = State 1, tape = 110[1]1_}
+Config {state = State 1, tape = 11[0]01_}
+Config {state = State 1, tape = 1[1]101_}
+Config {state = State 1, tape = [1]0101_}
+Config {state = State 1, tape = [_]00101_}
+Config {state = State 2, tape = _[0]0101_}
+Config {state = State 2, tape = _0[0]101_}
+Config {state = State 2, tape = _00[1]01_}
+Config {state = State 2, tape = _001[0]1_}
+Config {state = State 2, tape = _0010[1]_}
+Config {state = State 2, tape = _00101[_]}
+Config {state = Halt   , tape = _00101_[_]}

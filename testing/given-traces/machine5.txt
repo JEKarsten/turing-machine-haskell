@@ -1,0 +1,12 @@
+Config {state = State 0, tape = 0101[_]}
+Config {state = State 1, tape = 010[1]_}
+Config {state = State 1, tape = 01[0]0_}
+Config {state = State 1, tape = 0[1]10_}
+Config {state = State 1, tape = [0]010_}
+Config {state = State 1, tape = [_]1010_}
+Config {state = State 2, tape = _[1]010_}
+Config {state = State 2, tape = _1[0]10_}
+Config {state = State 2, tape = _10[1]0_}
+Config {state = State 2, tape = _101[0]_}
+Config {state = State 2, tape = _1010[_]}
+Config {state = Halt   , tape = _1010_[_]}

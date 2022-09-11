@@ -1,0 +1,41 @@
+state: 0
+  read 0      write: 0  move: R  goto: Halt
+  read 1      write: 1  move: R  goto: Halt
+  read 2      write: 2  move: R  goto: Halt
+  read 3      write: 3  move: R  goto: Halt
+  read 4      write: 4  move: R  goto: Halt
+  read 5      write: 5  move: R  goto: Halt
+  read 6      write: 6  move: R  goto: Halt
+  read 7      write: 7  move: R  goto: Halt
+  read 8      write: 8  move: R  goto: Halt
+  read 9      write: 9  move: R  goto: Halt
+  read _      write: _  move: L  goto: State 1
+
+ state: 1
+  read 0      write: 1  move: L  goto: State 1
+  read 1      write: 2  move: L  goto: State 1
+  read 2      write: 3  move: L  goto: State 1
+  read 3      write: 4  move: L  goto: State 1
+  read 4      write: 5  move: L  goto: State 1
+  read 5      write: 6  move: L  goto: State 1
+  read 6      write: 7  move: L  goto: State 1
+  read 7      write: 8  move: L  goto: State 1
+  read 8      write: 9  move: L  goto: State 1
+  read 9      write: 0  move: L  goto: State 1
+  read _      write: _  move: R  goto: Halt
+
+tapeInit: 7349230_
+
+
+-- the trace of this machine on the given tape
+
+Config {state = State 0, tape = 7349230[_]}
+Config {state = State 1, tape = 734923[0]_}
+Config {state = State 1, tape = 73492[3]1_}
+Config {state = State 1, tape = 7349[2]41_}
+Config {state = State 1, tape = 734[9]341_}
+Config {state = State 1, tape = 73[4]0341_}
+Config {state = State 1, tape = 7[3]50341_}
+Config {state = State 1, tape = [7]450341_}
+Config {state = State 1, tape = [_]8450341_}
+Config {state = Halt   , tape = _[8]450341_}

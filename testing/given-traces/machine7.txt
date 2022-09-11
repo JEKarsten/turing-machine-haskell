@@ -1,0 +1,10 @@
+Config {state = State 0, tape = 7349230[_]}
+Config {state = State 1, tape = 734923[0]_}
+Config {state = State 1, tape = 73492[3]1_}
+Config {state = State 1, tape = 7349[2]41_}
+Config {state = State 1, tape = 734[9]341_}
+Config {state = State 1, tape = 73[4]0341_}
+Config {state = State 1, tape = 7[3]50341_}
+Config {state = State 1, tape = [7]450341_}
+Config {state = State 1, tape = [_]8450341_}
+Config {state = Halt   , tape = _[8]450341_}
